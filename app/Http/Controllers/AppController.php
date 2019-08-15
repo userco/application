@@ -32,3 +32,4 @@ class AppController extends Controller
 	
 		return View::make('app/thankyou')->with(array('name'=> $name));
 	}
+}	
