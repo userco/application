@@ -17,6 +17,11 @@ class AppController extends Controller
 	
     public function store(Request $request){
 		
+		$validatedData = $request->validate([
+			  'email' => 'required|email',
+			  'name' => 'required',
+			  'city' => 'required'
+		 ]);
 		// get the data that the user have entered
 		$input = Input::get();
 		$email = $input['email'];
