@@ -1,1 +1,1 @@
-Thank you, {{name}}!
+Thank you, {{$name}}!

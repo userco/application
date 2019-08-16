@@ -21,7 +21,7 @@
 				</ul>
 			  </div><br />
 		@endif
-		{{ Form::open(array('url' => '/register', 'onsubmit'=>'validateForm()')) }}
+		{{ Form::open(array('url' => '/register','id' => 'form','onsubmit'=>'validateForm()')) }}
 			{{Form::label('email', 'Email')}}
 			{{ Form::text('email', null, array('id' => 'email'))}}
 			<br/>
@@ -31,10 +31,11 @@
 			{{ Form::label('city', 'City')}}
 			{{ Form::text('city', null, array('id' => 'city'))}}
 			<br/>
-			{{Form::submit('Save', null, array('class' => 'btn btn-primary', 'onclick'=>"validateForm()"))}}
+			{{Form::submit('Save', null, array('class' => 'btn btn-primary', 'id' => 'submit', 'onclick'=>"validateForm()"))}}
 		{{ Form::close() }}
 		
 		{{ Html::script('js/validation.js') }}
+		{{ Html::script('js/ajax_post_submit.js') }}
 	</div>
   </body>
 </html>

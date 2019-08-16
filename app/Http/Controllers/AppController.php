@@ -35,6 +35,6 @@ class AppController extends Controller
 		$appObject->city = $city;
 		$appObject->save();
 	
-		return View::make('app/thankyou')->with(array('name'=> $name));
+		return View::make('app/register')->with(array('name'=> $name));
 	}
 }	
