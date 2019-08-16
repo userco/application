@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AppEmail;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use View;
 use App\Http\Controllers\Controller;
 use App\App;
+use Illuminate\Support\Facades\Mail;
 
 class AppController extends Controller
 {
@@ -32,7 +34,8 @@ class AppController extends Controller
 		$appObject->name = $name;
 		$appObject->city = $city;
 		$appObject->save();
-	
+		
+		Mail::to($email)->send(new AppEmail($appObject));
 		return View::make('app/thankyou')->with(array('name'=> $name));
 	}
 }	
