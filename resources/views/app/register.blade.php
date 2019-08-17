@@ -12,6 +12,7 @@
   </head>
   <body>
 	<div class="container">
+	<h1> Registration Form</h2>
 		@if ($errors->any())
 			  <div class="alert alert-danger">
 				<ul>
@@ -22,16 +23,24 @@
 			  </div><br />
 		@endif
 		{{ Form::open(array('url' => '/register','id' => 'form','onsubmit'=>'validateForm()')) }}
-			{{Form::label('email', 'Email')}}
-			{{ Form::text('email', null, array('id' => 'email'))}}
-			<br/>
-			{{ Form::label('name', 'Name')}}
-			{{ Form::text('name', null, array('id' => 'name'))}}
-			<br/>
-			{{ Form::label('city', 'City')}}
-			{{ Form::text('city', null, array('id' => 'city'))}}
-			<br/>
+		<table>
+		<tr>
+		<td>	{{Form::label('email', 'Email')}} </td>
+		<td>	{{ Form::text('email', null, array('id' => 'email'))}} </td>
+		</tr>
+		<tr>
+		<td>	{{ Form::label('name', 'Name')}}  </td>
+		<td>	{{ Form::text('name', null, array('id' => 'name'))}}    </td>
+		</tr>
+		<tr>
+		<td>	{{ Form::label('city', 'City')}}  </td>
+		<td>	{{ Form::text('city', null, array('id' => 'city'))}}    </td>
+		</tr>
+		<tr>
+		<td colspan="2" align="center">
 			{{Form::submit('Save', null, array('class' => 'btn btn-primary', 'id' => 'submit', 'onclick'=>"validateForm()"))}}
+		</td>
+		</tr>
 		{{ Form::close() }}
 		
 		{{ Html::script('js/validation.js') }}
