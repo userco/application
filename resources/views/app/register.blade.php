@@ -43,7 +43,7 @@
 		</tr>
 		{{ Form::close() }}
 		
-		{{ Html::script('js/validation.js') }}
+		{{ Html::script('js/validate.js') }}
 		{{ Html::script('js/ajax_post_submit.js') }}
 	</div>
   </body>
