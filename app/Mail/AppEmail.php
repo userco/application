@@ -36,8 +36,7 @@ class AppEmail extends Mailable
     public function build()
     {
         return $this->from('i_n_f@abv.bg')
-                    ->view('mails.email');
-                    
+                    ->view('mails.email');      
                       
     }
 }

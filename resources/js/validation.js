@@ -1,4 +1,5 @@
 function validateForm() {
+	
   var email = document.getElementById('email').value;
   var name = document.getElementById('name').value;
   var city = document.getElementById('city').value;
