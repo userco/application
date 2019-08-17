@@ -38,4 +38,8 @@ class AppController extends Controller
 		Mail::to($email)->send(new AppEmail($appObject));
 		return View::make('app/thankyou')->with(array('name'=> $name));
 	}
+	
+	public function show(Request $request, $name){		
+		return View::make('app/thankyou')->with(array('name'=> $name));
+	}	
 }	

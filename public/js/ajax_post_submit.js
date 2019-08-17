@@ -17,12 +17,14 @@ $( document ).ready(function() {
 				data: frm.serialize(),
 			
 				success: function (data, status) {
+					window.location.href = '/thankyou/'+ name;
 				},
 				error: function (xhr, desc, err)
 				{
 					console.log(desc);
 				}
 			});
+			
 		})
 	})
 });

@@ -26,3 +26,9 @@ Route::get('/register', [
 	'uses'      => 'AppController@store',
 
  ]);
+Route::get('/thankyou/{name}', [
+
+	'as'        => 'thankyou',
+	'uses'      => 'AppController@show',
+
+ ]);
