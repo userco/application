@@ -13,7 +13,6 @@ $( document ).ready(function() {
 				type: frm.attr('method'),
 				url: frm.attr('action'),
 				data: frm.serialize(),
-			
 				success: function (data, status) {
 					window.location.href = '/thankyou/'+name;
 				},
