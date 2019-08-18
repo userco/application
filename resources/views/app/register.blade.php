@@ -22,7 +22,7 @@
 				</ul>
 			  </div><br />
 		@endif
-		{{ Form::open(array('url' => '/register','id' => 'form','onsubmit'=>'validateForm()')) }}
+		{{ Form::open(array('method'=>'post', 'url' => '/register','id' => 'form','onsubmit'=>'validateForm()')) }}
 		<table>
 		<tr>
 		<td>	{{Form::label('email', 'Email')}} </td>

@@ -24,7 +24,7 @@ class AppController extends Controller
 			  'name' => 'required',
 			  'city' => 'required'
 		 ]);
-		 
+
 		//get user input
 		$input = Input::get();
 		$email = $input['email'];
